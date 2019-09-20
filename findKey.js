@@ -37,11 +37,13 @@ const faveCities = {
   "Maui":     {rank: 8}
 };
 
-const highRanking = function (num) {
-  if (num.rank === 10) {
-    return true;
-  }
-}
+// const highRanking = function (num) {
+//   if (num.rank === 10) {
+//     return true;
+//   }
+// }
+
+ const highRanking = num => num.rank ===10;
 
 const result2 = findKey(faveCities, highRanking);
 

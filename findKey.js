@@ -1,8 +1,8 @@
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
-    console.log(`👍🏼Assertation Passed: ${actual}  === ${expected}`);
+    console.log(`✅Assertation Passed: ${actual} === ${expected}`);
   } else {
-    console.log(`👎🏼Assertation Failed: ${actual} !== ${expected}`);
+    console.log(`🔴Assertation Failed: ${actual} !== ${expected}`);
   }
 };
 
@@ -14,7 +14,7 @@ const assertEqual = function(actual, expected) {
 
 //tip: look at findKeyByValue, as some of the core logic will be the same
 
-const findKey = function (obj, callback) {
+const findKey = function(obj, callback) {
   for (const key in obj) {
     if (callback(obj[key])) {
       return key;
@@ -43,7 +43,7 @@ const faveCities = {
 //   }
 // }
 
- const highRanking = num => num.rank ===10;
+const highRanking = num => num.rank === 10;
 
 const result2 = findKey(faveCities, highRanking);
 

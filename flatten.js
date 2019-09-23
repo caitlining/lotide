@@ -23,13 +23,14 @@ const flatten = function(arr) {
     if (Array.isArray(arr[i])) {
       for (let q = 0; q < arr[i].length; q++) {
         flatArray.push(arr[i][q]);
-      } 
+      }
     } else {
       flatArray.push(arr[i]);
     }
-  } return flatArray;
+  }
+  return flatArray;
 };
-
+ 
 // TESTING
 
 console.log(flatten([1, 2, [3, 4], 5, [6]]));

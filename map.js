@@ -22,7 +22,8 @@ const eqArrays = function(arrOne, arrTwo) {
     if (arrOne[i] !== arrTwo[i]) {
       return false;
     }
-  } return true;
+  } 
+  return true;
 };
 
 const assertArraysEqual = function(arrOne, arrTwo) {

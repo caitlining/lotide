@@ -66,3 +66,5 @@ assertArraysEqual(map(arianaLyrics, returnFirstLetter), ['n', 't', 'l', 't', 'c'
 console.log(map(arianaLyrics, capitalize));
 console.log(map(words, capitalize));
 
+module.exports = map;
+

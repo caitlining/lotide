@@ -60,3 +60,5 @@ console.log(findKeyByValue(bestTVShowsByGenre, "The Expanse"));
 console.log(findKeyByValue(relationships, "Jenny"));
 console.log(findKeyByValue(relationships, "Bob"));
 
+module.exports = findKeyByValue;
+

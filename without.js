@@ -42,12 +42,9 @@ const without = function(source, itemsToRemove) {
 //   } return cleanArray;
 // };
 
-
-// TESTING
-// console.log(without([1, 2, 3], [1]));
-// console.log(without(["1", "2", "3"], [1, 2, "3"]));
-
 assertArraysEqual(without([1, 2, 3], [1]), [2, 3]);
 assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]), ["1", "2"]);
+
+module.exports = without;
 
 

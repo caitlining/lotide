@@ -52,12 +52,6 @@ const eqObjects = function(object1, object2) {
   }
 };
 
-
-
-
-// TESTS
-
-
 const ab = { a: "1", b: "2" };
 const ba = { b: "2", a: "1" };
 //(eqObjects(ab, ba));
@@ -82,4 +76,6 @@ const aArr = { a: [1, 2, 3], b: 1 };
 const bArr = { a: 1, b: [1, 2, 3] };
 
 assertEqual(eqObjects(aArr, bArr), false);
+
+module.exports = eqObjects;
 

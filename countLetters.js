@@ -51,8 +51,6 @@ const countLetters = function(inputSentence) {
 const results1 = countLetters("how are you today");
 const results2 = countLetters("lighthouse in the house");
 
-//TESTS
-
 console.log(results1);
 console.log(results2);
 
@@ -61,6 +59,8 @@ assertEqual(results1["h"], 1);
 assertEqual(results1["o"], 3);
 assertEqual(results2["l"], 1);
 assertEqual(results2["i"], 2);
+
+module.exports = countLetters;
 
 
 

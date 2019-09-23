@@ -37,12 +37,6 @@ const faveCities = {
   "Maui":     {rank: 8}
 };
 
-// const highRanking = function (num) {
-//   if (num.rank === 10) {
-//     return true;
-//   }
-// }
-
 const highRanking = num => num.rank === 10;
 
 const result2 = findKey(faveCities, highRanking);
@@ -51,10 +45,10 @@ const result3 = findKey(faveCities, num => num.rank === 9);
 
 const result4 = findKey(faveCities, num => num.rank < 5);
 
-
-
 assertEqual(result1, "noma");
 assertEqual(result2, "New York");
 assertEqual(result3, "Florence");
 assertEqual(result4, undefined);
+
+module.exports = findKey;
 

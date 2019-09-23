@@ -17,21 +17,6 @@ const assertArraysEqual = function(arrOne, arrTwo) {
   }
 };
 
-
-/* first version: works but is not as easy to read
-
-const middle = function(arr) {
-  let result = [];
-  if (arr.length <= 2) {
-    return result;
-  } else if (arr.length % 2 === 0) {
-    result.push(arr[(arr.length / 2) - 1]);
-    result.push(arr[arr.length / 2]);
-  } else {
-    result.push(arr[Math.floor(arr.length / 2)]);
-  } return result;
-};*/
-
 const middle = function(arr) {
   const tooShortForMiddle = arr.length <= 2;
   const evenArray = arr.length % 2 === 0;
@@ -47,9 +32,23 @@ const middle = function(arr) {
   }
 };
 
-/*console.log(middle([2]));
-console.log(middle([1, 2, 3, 4]));
-console.log(middle([1, 2, 3, 4, 5, 6, 7]));*/
+// first version: works but is not as easy to read
+
+// const middle = function(arr) {
+//   let result = [];
+//   if (arr.length <= 2) {
+//     return result;
+//   } else if (arr.length % 2 === 0) {
+//     result.push(arr[(arr.length / 2) - 1]);
+//     result.push(arr[arr.length / 2]);
+//   } else {
+//     result.push(arr[Math.floor(arr.length / 2)]);
+//   } return result;
+// };
+
+// console.log(middle([2]));
+// console.log(middle([1, 2, 3, 4]));
+// console.log(middle([1, 2, 3, 4, 5, 6, 7]));
 
 //TEST CONDITIONS
 

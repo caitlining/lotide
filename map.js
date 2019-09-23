@@ -22,7 +22,7 @@ const eqArrays = function(arrOne, arrTwo) {
     if (arrOne[i] !== arrTwo[i]) {
       return false;
     }
-  } 
+  }
   return true;
 };
 

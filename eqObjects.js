@@ -1,8 +1,8 @@
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
-    console.log(`👍🏼Assertation Passed: ${actual}  === ${expected}`);
+    console.log(`✅Assertation Passed: ${actual} === ${expected}`);
   } else {
-    console.log(`👎🏼Assertation Failed: ${actual} !== ${expected}`);
+    console.log(`🔴Assertation Failed: ${actual} !== ${expected}`);
   }
 };
 
@@ -17,21 +17,20 @@ const eqArrays = function(arrOne, arrTwo) {
   } return true;
 };
 
-/* works with primitive key values only!
-
-const eqObjects = function(object1, object2) {
-  let object1KeyArray = Object.keys(object1);
-  let object2KeyArray = Object.keys(object2);
-  if (object1KeyArray.length !== object2KeyArray.length) {
-    return false;
-  } else {
-    for (const keyName of object1KeyArray) {
-      if (object1[keyName] !== object2[keyName]) {
-        return false;
-      }
-    } return true;
-  }
-};*/
+// below works with primitive key values only!
+// const eqObjects = function(object1, object2) {
+//   let object1KeyArray = Object.keys(object1);
+//   let object2KeyArray = Object.keys(object2);
+//   if (object1KeyArray.length !== object2KeyArray.length) {
+//     return false;
+//   } else {
+//     for (const keyName of object1KeyArray) {
+//       if (object1[keyName] !== object2[keyName]) {
+//         return false;
+//       }
+//     } return true;
+//   }
+// };
 
 
 const eqObjects = function(object1, object2) {
@@ -45,10 +44,11 @@ const eqObjects = function(object1, object2) {
         return eqArrays(object1[keyName], object2[keyName]);
       } else {
         if (object1[keyName] !== object2[keyName]) {
-        return false;
+          return false;
         }
       }
-    } return true;
+    }
+    return true;
   }
 };
 
@@ -56,7 +56,6 @@ const eqObjects = function(object1, object2) {
 
 
 // TESTS
-
 
 
 const ab = { a: "1", b: "2" };
@@ -68,7 +67,6 @@ const abc = { a: "1", b: "2", c: "3" };
 
 assertEqual(eqObjects(ab, ba), true);
 assertEqual(eqObjects(ab, abc), false);
-
 
 const cd = { c: "1", d: ["2", 3] };
 const dc = { d: ["2", 3], c: "1" };

@@ -28,9 +28,6 @@ const eqObjects = function(object1, object2) {
   }
 };
 
-
-//this will take in two objects and console.log an appropriate message to the console
-
 const assertObjectsEqual = function(inputObject, expectedObject) {
   const inspect = require('util').inspect;
   if (eqObjects(inputObject, expectedObject)) {

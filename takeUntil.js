@@ -1,13 +1,3 @@
-// implementing the function takeUntil
-//this function will take in two parameters
-//1. the array to work with
-//2. the callback
-
-//the function will return a "slice of the array"
-//the slice will include elements from the input array
-//the slice will start with the first element and will keep going until the callback returns a TRUTHY value
-
-//the callback should only be provided one value: the single item in the array (so one at a time)
 const takeUntil = function(arr, callback) {
   const slice = [];
   for (const element of arr) {

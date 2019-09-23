@@ -6,14 +6,6 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-//implement the function findKey
-// this will take in an OBJECT and a callback
-//this will scan the object
-//this will RETURN the FIRST KEY for which the callback returns a truthy value
-//if NO KEY is found, it should return undefined
-
-//tip: look at findKeyByValue, as some of the core logic will be the same
-
 const findKey = function(obj, callback) {
   for (const key in obj) {
     if (callback(obj[key])) {

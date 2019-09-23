@@ -1,9 +1,3 @@
-//Building our own Map function
-//This function will take in two arguments:
-//1. An array to map
-//2. A callback function
-//our map function will return a new array based on the reults of the callback function
-
 const words = ["ground", "control", "to", "major", "tom"];
 const arianaLyrics = ["no", "tears", "left", "to", "cry"];
 

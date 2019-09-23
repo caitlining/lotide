@@ -16,7 +16,8 @@ const takeUntil = function(arr, callback) {
     } else {
       return slice;
     }
-  } return slice;
+  }
+  return slice;
 };
 
 const testFunction = function(num) {

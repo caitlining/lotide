@@ -1,11 +1,3 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅Assertation Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🔴Assertation Failed: ${actual} !== ${expected}`);
-  }
-};
-
 const findKey = function(obj, callback) {
   for (const key in obj) {
     if (callback(obj[key])) {
@@ -13,34 +5,6 @@ const findKey = function(obj, callback) {
     }
   }
 };
-
-const result1 = findKey({
-  "Blue Hill":  { stars: 1 },
-  "Akaleri":    { stars: 3 },
-  "noma":       { stars: 2 },
-  "elBulli":    { stars: 3 },
-  "Ora":        { stars: 2 },
-  "Akelarre":   { stars: 3 }
-}, x => x.stars === 2);
-
-const faveCities = {
-  "New York": {rank: 10},
-  "Florence": {rank: 9},
-  "Maui":     {rank: 8}
-};
-
-const highRanking = num => num.rank === 10;
-
-const result2 = findKey(faveCities, highRanking);
-
-const result3 = findKey(faveCities, num => num.rank === 9);
-
-const result4 = findKey(faveCities, num => num.rank < 5);
-
-assertEqual(result1, "noma");
-assertEqual(result2, "New York");
-assertEqual(result3, "Florence");
-assertEqual(result4, undefined);
 
 module.exports = findKey;
 

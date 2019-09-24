@@ -1,6 +1,6 @@
 {
   "name": "@caitlining/lotide",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A library of functions, similar to but simpler than the Lodash library. Created as an assignment for the Lighthouse Labs Web Development Bootcamp, indended for learning purposes only.",
   "main": "assertArraysEqual.js",
   "directories": {

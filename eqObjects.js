@@ -21,6 +21,8 @@ const eqObjects = function(object1, object2) {
   }
 };
 
+console.log(eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }));
+
 
 module.exports = eqObjects;
 

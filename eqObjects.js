@@ -9,6 +9,8 @@ const eqObjects = function(object1, object2) {
     for (const keyName of object1KeyArray) {
       if (Array.isArray(object1[keyName]) && Array.isArray(object2[keyName])) {
         return eqArrays(object1[keyName], object2[keyName]);
+      } else if (typeof object1[keyName] === 'object' && typeof object2[keyName] === 'object') {
+        return eqObjects(object1[keyName], object2[keyName]);
       } else {
         if (object1[keyName] !== object2[keyName]) {
           return false;
@@ -18,6 +20,7 @@ const eqObjects = function(object1, object2) {
     return true;
   }
 };
+
 
 module.exports = eqObjects;
 

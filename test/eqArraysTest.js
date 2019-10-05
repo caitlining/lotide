@@ -17,4 +17,12 @@ describe('#eqArrays', () => {
     assert.deepEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), false);
   });
 
+  it('should return true for matching nested arrays', () => {
+    assert.deepEqual(eqArrays([[2, 3], [4]], [[2, 3], [4]]), true);
+  });
+
+  it('should return false for unmatching  nested arrays', () => {
+    assert.deepEqual(eqArrays([[2, 3], [4]], [[2, 3], 4]), false);
+  });
+
 });

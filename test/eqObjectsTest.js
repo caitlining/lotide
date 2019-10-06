@@ -9,11 +9,11 @@ const dc = { d: ["2", 3], c: "1" };
 
 const cd2 = { c: "1", d: ["2", 3, 4] };
 
-const nested = { a: 1, b: 2, c: {c: 3}};
-const notNested = {a: 1, b: 2, c: 3};
-const sameNested = { a: 1, b: 2, c: {c: 3}};
-const diffNested = {a: 1, b: 3, c: {c: 3}};
-
+const nested = { a: 1, b: 2, c: {c: 3} };
+const notNested = { a: 1, b: 2, c: 3 } ;
+const sameNested = { a: 1, b: 2, c: {c: 3} };
+const diffNested = { a: 1, b: 3, c: {c: 3}, d: 6 };
+const lateDiffNested = {a: 1, b: 3, c: {c: 3}, d: 5};
 
 describe('#eqObjects', () => {
 
@@ -43,6 +43,10 @@ describe('#eqObjects', () => {
 
   it ('should return false for (nested, diffNested)', () => {
     assert.equal(eqObjects(nested, diffNested), false);
+  });
+
+  it ('should return false for (diffNested, lateDiffNested)', () => {
+    assert.equal(eqObjects(diffNested, lateDiffNested), false);
   });
   
 });
